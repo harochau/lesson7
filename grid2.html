@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-auto-rows: 150px;
+            grid-gap:10px;
+            
+            grid-template-areas: 
+                "a"
+                "c"
+                "b"
+                "d"
+            ;
+        }
+
+      header {
+        grid-area: a;
+      }
+      main {
+        grid-area: b;
+      }
+      aside {
+        grid-area: c;
+      }
+      footer {
+        grid-area: d;
+      }
+      body * {
+        
+
+        background: #fc9;
+        border: 1px solid #f96;
+        border-radius: 5px;
+        padding: 5px;
+        color: #fff;
+        font-size: 2em;
+      }
+      @media(min-width: 640px){
+          body{
+              grid-template-columns: 2fr 4fr;
+              grid-template-areas: 
+              "a a"
+              "c b"
+              "c d";
+              
+          }
+          main{
+            /* visibility: hidden; */
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Заголовок сайта</header>
+    <main>Содержимое</main>
+    <aside>Сайдбар</aside>
+    <footer>Подвал</footer>
+  </body>
+</html>
